@@ -10,10 +10,34 @@ import {
 import React from "react";
 import { layout } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Team from "./Components/Team";
+import Service from "./Components/Service";
+import Portfolio from "./Components/Porfolio";
+import B2B from "./Components/B2B.";
+import Blog from "./Components/Blog";
+import Contact from "./Components/Contact";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
+  const App = () => {
+    return(
+      <><switch>
+        <Route exact path = "/" component={Home} />
+        <Route exact path = "/about" component={About} />
+        <Route exact path = "/team" component={Team} />
+        <Route exact path = "/service" component={Service} />
+        <Route exact path = "/portfolio" component={Portfolio} />
+        <Route exact path = "/B2B" component={B2B} />
+        <Route exact path = "/Blog" component={Blog} />
+        <Route exact path = "/contact" component={Contact} />
+        </switch>
+      </>
+    )
+  }
   return (
     <VStack padding={5}>
       <Flex width="100%">
@@ -81,4 +105,56 @@ function App() {
   );
 }
 
-export default App;
+
+export default common;
+
+
+
+
+
+
+import {
+    Flex,
+    Heading,
+    Stack,
+    useColorMode,
+    useMediaQuery,
+    VStack,
+  } from "@chakra-ui/react";
+  import React from "react";
+  import { layout } from "@chakra-ui/react";
+  import { Box } from '@chakra-ui/react'
+  
+  function Home() {
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === "dark";
+    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    return (
+      <Stack>
+        <Flex>
+          <Box bg="tomato" w="100%" p={4} color="Black">
+            This is the Box
+          </Box>
+        </Flex>
+      </Stack>
+    );
+  }
+  
+  export default Home;
+
+
+
+  <ChakraProvider>
+        <ColorModeScript initialColorMode="light"></ColorModeScript>
+        <App />
+      </ChakraProvider>
+
+
+
+  
+<Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
