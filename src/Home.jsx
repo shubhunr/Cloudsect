@@ -21,27 +21,30 @@ function Home() {
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
         p={isNotSmallerScreen ? "32" : "0"}
-        alignSelf="flex-center"
+        alignSelf="center"
       >
-        <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-center">
-          <Text fontSize="5xl" fontWeight="semibold" ml="40%" mt="10%">
-            Welcome to
+        <Box mt={isNotSmallerScreen ? "0" : 16} align="center">
+          <Text fontSize="5xl" fontWeight="semibold"  mt="10%">
+            Welcome
+          </Text>
+          <Text fontSize="5xl" fontWeight="semibold" >
+            to
           </Text>
           <Text
             fontSize="7xl"
             fontWeight="bold"
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             bgClip="text"
-            ml="38%"
+            mt="2%"
           >
-            Cloudsect
+            CloudSect
           </Text>
           <Spacer></Spacer>
-          <Text fontSize="xl" fontWeight="semibold" ml="22%">
+          <Text fontSize="xl" fontWeight="semibold" mt="10%" >
             We are Cloud Solution Expert & Creativity Team, We offer best &
             cloud ready Software solution & IT Services{" "}
           </Text>
-          <Button mt="8" ml="43%" colorScheme="blue" onClick={() => window.open()}>
+          <Button mt="8" colorScheme="blue" onClick={() => window.open()}>
             Explore More
           </Button>
         </Box>
