@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./Home";
 import About from "./About";
+import Team from "./Team";
+
 //import { Route, Routes } from "react-router-dom";
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Flex, Heading, IconButton, Spacer, useColorMode, VStack, Button } from "@chakra-ui/react";
@@ -65,6 +67,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/team" element={<Team/>} />
         </Routes>
       </Router>
 
