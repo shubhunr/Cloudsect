@@ -1,5 +1,5 @@
 import {
-  Stack,
+  VStack,
   useMediaQuery,
   Flex,
   Text,
@@ -7,8 +7,12 @@ import {
   Box,
   Button,
   Spacer,
+  Center,
+  Container,
 } from "@chakra-ui/react";
 import React from "react";
+import About from "./About"
+
 
 function Home() {
   const { colorMode } = useColorMode();
@@ -16,40 +20,44 @@ function Home() {
   const { isNotSmallerScreen } = useMediaQuery("(min-width:600px)");
 
   return (
-    <Stack>
+    <VStack width="100%" height="915px" >
       <Flex
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
         p={isNotSmallerScreen ? "32" : "0"}
-        alignSelf="center"
-      >
-        <Box mt={isNotSmallerScreen ? "0" : 16} align="center">
-          <Text fontSize="5xl" fontWeight="semibold"  mt="10%">
+        alignSelf="center" 
+        mt="12%"
+        
+        >
+      
+        <Box mt={isNotSmallerScreen ? "0" : 16}  align="center">
+          <Text fontSize="5xl" fontWeight="semibold">
             Welcome
           </Text>
           <Text fontSize="5xl" fontWeight="semibold" >
             to
-          </Text>
+          </Text><br />
           <Text
             fontSize="7xl"
             fontWeight="bold"
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             bgClip="text"
-            mt="2%"
+            
           >
             CloudSect
-          </Text>
+          </Text><br />
           <Spacer></Spacer>
-          <Text fontSize="xl" fontWeight="semibold" mt="10%" >
+          <Text fontSize="xl" fontWeight="semibold" >
             We are Cloud Solution Expert & Creativity Team, We offer best &
             cloud ready Software solution & IT Services{" "}
-          </Text>
-          <Button mt="8" colorScheme="blue" onClick={() => window.open()}>
+          </Text><br /><br />
+          <Button  colorScheme="blue" onClick={() => window.open(<About />)}>
             Explore More
           </Button>
         </Box>
       </Flex>
-    </Stack>
+      
+    </VStack>
   );
 }
 
