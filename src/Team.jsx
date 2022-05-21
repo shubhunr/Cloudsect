@@ -21,8 +21,11 @@ function Team() {
 
   return (
     <VStack>
-      <Flex alignSelf="center">
-        <Box width="1000px" align="center">
+      
+      <Flex alignSelf="center" width="1000px" direction={isNotSmallerScreen ? "row" : "column"}
+        spacing="200px"
+        p={isNotSmallerScreen ? "32" : "0"}>
+        <Box align="center">
           <Text
             fontSize="6xl"
             fontWeight="bold"
@@ -32,7 +35,7 @@ function Team() {
           >
             Our team
           </Text>
-          <Text fontSize="2xl" fontWeight="semibold">
+          <Text fontSize="xl" fontWeight="semibold" textAlign="center" mt="5%">
             Our team can turn any inspiration into production-ready. All the
             type of apps are at their fingertips across desktop Web or mobile
             apps, with expert finishing, advanced support and hassle-free
@@ -40,32 +43,33 @@ function Team() {
           </Text>
         </Box>
       </Flex>
-      <Flex alignSelf="center" mt="6%">
-        <Box p={10} boxSize="300px">
+      <Flex alignSelf="center" pt="8%" >
+        <Box p={10} boxSize="300px" align="center">
           <Icon as={MdGroups} boxSize="50px" />
           <Spacer />
           <CountUp end={50} />
           <Text fontSize='2xl'>Happy Client</Text>
         </Box>
-        <Box p={10} boxSize="300px">
+        <Box p={10} boxSize="300px" align="center">
           <Icon as={SiTwitter} boxSize="50px" />
           <Spacer />
           <CountUp end={150} />
           <Text fontSize='2xl'>Followers</Text>
         </Box>
-        <Box p={10} boxSize="300px">
+        <Box p={10} boxSize="300px" align="center">
           <Icon as={GrDeliver} boxSize="50px" />
           <Spacer />
           <CountUp end={300} />
           <Text fontSize='2xl'>Project Delivery</Text>
         </Box>
-        <Box p={10} boxSize="300px">
+        <Box p={10} boxSize="300px" align="center">
           <Icon as={GrBladesVertical} boxSize="50px" />
           <Spacer />
           <CountUp end={100} />
           <Text fontSize='2xl'>Project Done</Text>
         </Box>
       </Flex>
+      
     </VStack>
   );
 }
