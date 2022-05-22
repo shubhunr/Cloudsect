@@ -55,8 +55,9 @@ function Home() {
           </Box>
         </Flex>
         <br />
-        <Flex alignSelf="center">
-          <Box p={10} boxSize="300px" align="center">
+        <Flex alignSelf="center" 
+          p={isNotSmallerScreen ? "32" : "0"}>
+          <Box p={10} boxSize="300px" align="center" mt={isNotSmallerScreen ? "0" : 16} >
             <IconButton
               icon={<MdGroups boxSize="100" />}
               isRound="true"
@@ -68,7 +69,7 @@ function Home() {
               We are providing a unique solution for your problem
             </Text>
           </Box>
-          <Box p={10} boxSize="300px" align="center">
+          <Box p={10} boxSize="300px" align="center" mt={isNotSmallerScreen ? "0" : 16}>
             <IconButton icon={<IoCloudDoneSharp />} isRound="true"></IconButton>
             <Text fontSize="xl" fontWeight="bold" mt="10%">
               CLOUD MIGRATION
@@ -77,7 +78,7 @@ function Home() {
               We help you to rebuild your solution to migrate on cloud
             </Text>
           </Box>
-          <Box p={10} boxSize="300px" align="center">
+          <Box p={10} boxSize="300px" align="center" mt={isNotSmallerScreen ? "0" : 16}>
             <IconButton icon={<GoGraph />} isRound="true"></IconButton>
             <Text fontSize="xl" fontWeight="bold" mt="10%">
               STRATEGY
@@ -86,7 +87,7 @@ function Home() {
               Planning and Strategy making for project success
             </Text>
           </Box>
-          <Box p={10} boxSize="300px" align="center">
+          <Box p={10} boxSize="300px" align="center" mt={isNotSmallerScreen ? "0" : 16}>
             <IconButton icon={<GrDeliver />} isRound="true"></IconButton>
             <Text fontSize="xl" fontWeight="bold" mt="10%">
               CLOUD READY

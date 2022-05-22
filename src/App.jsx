@@ -9,7 +9,7 @@ import Service from "./Service";
 import Contact from "./Contact";
 import Navbar from "./Navbar";
 import Card1 from "./Card1";
-import Card2 from "./card2"
+import Footer from "./Footer";
 
 
 const App = () => {
@@ -19,9 +19,11 @@ const App = () => {
       <Home/>
       <About />
       <Team />
-     
+      
       <Service />
+      <Card1 />
       <Contact />
+      <Footer />
       
     </>
   );

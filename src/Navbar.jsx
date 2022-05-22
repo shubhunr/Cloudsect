@@ -43,15 +43,6 @@ function Navbar() {
           SERVICE
         </Button>
         <Button ml={8} colorScheme="blue" variant="link">
-          PORTFOLIO
-        </Button>
-        <Button ml={8} colorScheme="blue" variant="link">
-          B2B
-        </Button>
-        <Button ml={8} colorScheme="blue" variant="link">
-          BLOG
-        </Button>
-        <Button ml={8} colorScheme="blue" variant="link">
           CONTACT
         </Button>
         <Spacer></Spacer>
