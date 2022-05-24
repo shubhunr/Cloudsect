@@ -21,6 +21,7 @@ function Home() {
 
   return (
     <VStack width="100%" height="915px" >
+
       <Flex
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
